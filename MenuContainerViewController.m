@@ -37,8 +37,42 @@ NSTimeInterval const kburgerTimeToSlideMenuOpen = 0.2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupAllViewControllers];
 }
+
+-(void) setupAllViewControllers{
+    [self setupMenuViewController];
+    [self setupMainContentViewController];
+    
+}
+
+-(void) setupMenuViewController{
+    MenuTableViewController *leftMenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuVC"];
+    leftMenuVC.tableView.delegate = self;
+    
+    [self addChildViewController:leftMenuVC];
+    leftMenuVC.view.frame = self.view.frame;
+    
+    [self.view addSubview:leftMenuVC.view];
+    [leftMenuVC didMoveToParentViewController:self];
+    self.leftMenuViewController = leftMenuVC;
+}
+-(void) setupMainContentViewController{
+    MainContentViewController *contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainContentVC"];
+    
+    [self addChildViewController:contentViewController];
+    contentViewController.view.frame = self.view.frame;
+    
+    [self.view addSubview:contentViewController];
+    [contentViewController didMoveToParentViewController:self];
+    self.topViewController =contentViewController;
+}
+
+-(void) setupAdditionalViewControllers{
+    MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestions VC"];
+    self.myQuestionsViewController = myQuestionsVC;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
