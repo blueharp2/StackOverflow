@@ -139,6 +139,43 @@ NSTimeInterval const kburgerTimeToSlideMenuOpen = 0.2;
     }
 }
 
+-(void)switchToViewController:(UIViewController *)viewController{
+    [UIView animateWithDuration:kburgerTimeToSlideMenuOpen animations:^{
+        self.topViewController.view.frame = CGRectMake(self.view.frame.size.width, self.topViewController.view.frame.origin.y, self.topViewController.view.frame.size.width, self.topViewController.view.frame.size.height);
+    }completion:^(BOOL finished) {
+        CGRect oldFrame = self.topViewController.view.frame;
+        [self.topViewController willMoveToParentViewController:nil];
+        [self.topViewController.view removeFromSuperview];
+        [self.topViewController removeFromParentViewController];
+        
+        [self addChildViewController:viewController];
+        viewController.view.frame = oldFrame;
+        [self.view addSubview:viewController.view];
+        self.topViewController = viewController;
+        
+        [self.burgerButton removeFromSuperview];
+        [self.topViewController.view addSubview:self.burgerButton];
+        
+        [UIView animateWithDuration:kburgerTimeToSlideMenuOpen animations:^{
+            self.topViewController.view.center = self.view.center;
+        }completion:^(BOOL finished) {
+            [self.topViewController.view addGestureRecognizer:self.panGesture];
+            self.burgerButton.userInteractionEnabled = YES;
+            
+        }];
+    }];
+}
+
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *viewController = self.viewControllers[indexPath.row];
+    if (![viewController isEqual:self.topViewController]){
+        [self switchToViewController:viewController];
+        
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
