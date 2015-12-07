@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		90EE435F1C1627DA007811E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE435E1C1627DA007811E8 /* main.m */; };
 		90EE43621C1627DA007811E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43611C1627DA007811E8 /* AppDelegate.m */; };
-		90EE43651C1627DA007811E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43641C1627DA007811E8 /* ViewController.m */; };
 		90EE43681C1627DA007811E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EE43661C1627DA007811E8 /* Main.storyboard */; };
 		90EE436B1C1627DA007811E8 /* StackOverflow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43691C1627DA007811E8 /* StackOverflow.xcdatamodeld */; };
 		90EE436D1C1627DA007811E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90EE436C1C1627DA007811E8 /* Assets.xcassets */; };
 		90EE43701C1627DA007811E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EE436E1C1627DA007811E8 /* LaunchScreen.storyboard */; };
 		90EE437B1C1627DB007811E8 /* StackOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE437A1C1627DB007811E8 /* StackOverflowTests.m */; };
 		90EE43861C1627DB007811E8 /* StackOverflowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43851C1627DB007811E8 /* StackOverflowUITests.m */; };
+		90EE43961C16319F007811E8 /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43951C16319F007811E8 /* MenuContainerViewController.m */; };
+		90EE43991C163254007811E8 /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43981C163254007811E8 /* OAuthWebViewController.m */; };
+		90EE439C1C16327A007811E8 /* MainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE439B1C16327A007811E8 /* MainContentViewController.m */; };
+		90EE439F1C1632AA007811E8 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE439E1C1632AA007811E8 /* MenuTableViewController.m */; };
+		90EE43A21C1632EA007811E8 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43A11C1632EA007811E8 /* MyQuestionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +44,6 @@
 		90EE435E1C1627DA007811E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90EE43601C1627DA007811E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90EE43611C1627DA007811E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		90EE43631C1627DA007811E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		90EE43641C1627DA007811E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		90EE43671C1627DA007811E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90EE436A1C1627DA007811E8 /* StackOverflow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StackOverflow.xcdatamodel; sourceTree = "<group>"; };
 		90EE436C1C1627DA007811E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,16 @@
 		90EE43811C1627DB007811E8 /* StackOverflowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90EE43851C1627DB007811E8 /* StackOverflowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackOverflowUITests.m; sourceTree = "<group>"; };
 		90EE43871C1627DB007811E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90EE43941C16319F007811E8 /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuContainerViewController.h; path = ../MenuContainerViewController.h; sourceTree = "<group>"; };
+		90EE43951C16319F007811E8 /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuContainerViewController.m; path = ../MenuContainerViewController.m; sourceTree = "<group>"; };
+		90EE43971C163254007811E8 /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthWebViewController.h; path = ../OAuthWebViewController.h; sourceTree = "<group>"; };
+		90EE43981C163254007811E8 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthWebViewController.m; path = ../OAuthWebViewController.m; sourceTree = "<group>"; };
+		90EE439A1C16327A007811E8 /* MainContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainContentViewController.h; path = ../MainContentViewController.h; sourceTree = "<group>"; };
+		90EE439B1C16327A007811E8 /* MainContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainContentViewController.m; path = ../MainContentViewController.m; sourceTree = "<group>"; };
+		90EE439D1C1632AA007811E8 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewController.h; path = ../MenuTableViewController.h; sourceTree = "<group>"; };
+		90EE439E1C1632AA007811E8 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
+		90EE43A01C1632EA007811E8 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyQuestionsViewController.h; path = ../MyQuestionsViewController.h; sourceTree = "<group>"; };
+		90EE43A11C1632EA007811E8 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyQuestionsViewController.m; path = ../MyQuestionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +117,17 @@
 			children = (
 				90EE43601C1627DA007811E8 /* AppDelegate.h */,
 				90EE43611C1627DA007811E8 /* AppDelegate.m */,
-				90EE43631C1627DA007811E8 /* ViewController.h */,
-				90EE43641C1627DA007811E8 /* ViewController.m */,
-				90EE43661C1627DA007811E8 /* Main.storyboard */,
-				90EE436C1C1627DA007811E8 /* Assets.xcassets */,
-				90EE436E1C1627DA007811E8 /* LaunchScreen.storyboard */,
-				90EE43711C1627DA007811E8 /* Info.plist */,
-				90EE43691C1627DA007811E8 /* StackOverflow.xcdatamodeld */,
+				90EE43941C16319F007811E8 /* MenuContainerViewController.h */,
+				90EE43951C16319F007811E8 /* MenuContainerViewController.m */,
+				90EE43971C163254007811E8 /* OAuthWebViewController.h */,
+				90EE43981C163254007811E8 /* OAuthWebViewController.m */,
+				90EE439A1C16327A007811E8 /* MainContentViewController.h */,
+				90EE439B1C16327A007811E8 /* MainContentViewController.m */,
+				90EE439D1C1632AA007811E8 /* MenuTableViewController.h */,
+				90EE439E1C1632AA007811E8 /* MenuTableViewController.m */,
+				90EE43A01C1632EA007811E8 /* MyQuestionsViewController.h */,
+				90EE43A11C1632EA007811E8 /* MyQuestionsViewController.m */,
+				90EE43931C163152007811E8 /* Views */,
 				90EE435D1C1627DA007811E8 /* Supporting Files */,
 			);
 			path = StackOverflow;
@@ -120,6 +136,10 @@
 		90EE435D1C1627DA007811E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90EE436E1C1627DA007811E8 /* LaunchScreen.storyboard */,
+				90EE43711C1627DA007811E8 /* Info.plist */,
+				90EE43691C1627DA007811E8 /* StackOverflow.xcdatamodeld */,
+				90EE436C1C1627DA007811E8 /* Assets.xcassets */,
 				90EE435E1C1627DA007811E8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +161,14 @@
 				90EE43871C1627DB007811E8 /* Info.plist */,
 			);
 			path = StackOverflowUITests;
+			sourceTree = "<group>";
+		};
+		90EE43931C163152007811E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90EE43661C1627DA007811E8 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				90EE436B1C1627DA007811E8 /* StackOverflow.xcdatamodeld in Sources */,
-				90EE43651C1627DA007811E8 /* ViewController.m in Sources */,
+				90EE439C1C16327A007811E8 /* MainContentViewController.m in Sources */,
 				90EE43621C1627DA007811E8 /* AppDelegate.m in Sources */,
 				90EE435F1C1627DA007811E8 /* main.m in Sources */,
+				90EE43991C163254007811E8 /* OAuthWebViewController.m in Sources */,
+				90EE439F1C1632AA007811E8 /* MenuTableViewController.m in Sources */,
+				90EE43A21C1632EA007811E8 /* MyQuestionsViewController.m in Sources */,
+				90EE43961C16319F007811E8 /* MenuContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +537,7 @@
 				90EE438C1C1627DB007811E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90EE438D1C1627DB007811E8 /* Build configuration list for PBXNativeTarget "StackOverflowTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +546,7 @@
 				90EE438F1C1627DB007811E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90EE43901C1627DB007811E8 /* Build configuration list for PBXNativeTarget "StackOverflowUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +555,7 @@
 				90EE43921C1627DB007811E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

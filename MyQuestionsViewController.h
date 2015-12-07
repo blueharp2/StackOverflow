@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyQuestionsViewController.h
 //  StackOverflow
 //
 //  Created by Lindsey on 12/7/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MyQuestionsViewController : UIViewController
 
 @end
-
