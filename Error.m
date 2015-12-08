@@ -8,8 +8,8 @@
 
 #import "Error.h"
 
-NSString *const kStackOVerFlowErrorDomain = @"StackOverflow Error";
+NSString *const kStackOverFlowErrorDomain = @"StackOverflow Error";
 
-@implementation Error
+//@implementation Error
 
-@end
+//@end

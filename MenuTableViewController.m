@@ -19,7 +19,6 @@
     [super viewDidLoad];
     NSError *stackOverflowError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowBadJSON userInfo:nil];
     NSError *stackOverflowErrorTwo = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowConnectionDown userInfo:nil];
-    
     NSError *stackOverflowErrorThree = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowGeneralError userInfo:nil];
   
 }
