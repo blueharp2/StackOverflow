@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		397CE6DC8DA92A1669534025 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4F121A100FD3D34F75E5B4 /* libPods.a */; };
 		9028864F1C1782D2009AC31F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028864E1C1782D2009AC31F /* User.m */; };
+		902886521C178821009AC31F /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = 902886511C178821009AC31F /* Questions.m */; };
 		90D22E781C16407500CA417A /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D22E771C16407500CA417A /* hamburger.png */; };
 		90D22E7D1C16715C00CA417A /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D22E7C1C16715C00CA417A /* Error.m */; };
 		90EE435F1C1627DA007811E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE435E1C1627DA007811E8 /* main.m */; };
@@ -47,6 +48,8 @@
 		7E233B9741545704EA1AEF39 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9028864D1C1782D2009AC31F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		9028864E1C1782D2009AC31F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		902886501C178821009AC31F /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
+		902886511C178821009AC31F /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		90D22E771C16407500CA417A /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
 		90D22E7B1C16715C00CA417A /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Error.h; path = ../Error.h; sourceTree = "<group>"; };
 		90D22E7C1C16715C00CA417A /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Error.m; path = ../Error.m; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				90EE43A11C1632EA007811E8 /* MyQuestionsViewController.m */,
 				9028864D1C1782D2009AC31F /* User.h */,
 				9028864E1C1782D2009AC31F /* User.m */,
+				902886501C178821009AC31F /* Questions.h */,
+				902886511C178821009AC31F /* Questions.m */,
 				90D22E7B1C16715C00CA417A /* Error.h */,
 				90D22E7C1C16715C00CA417A /* Error.m */,
 				90EE43931C163152007811E8 /* Views */,
@@ -403,6 +408,7 @@
 				90EE439F1C1632AA007811E8 /* MenuTableViewController.m in Sources */,
 				90EE43A21C1632EA007811E8 /* MyQuestionsViewController.m in Sources */,
 				90EE43961C16319F007811E8 /* MenuContainerViewController.m in Sources */,
+				902886521C178821009AC31F /* Questions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
