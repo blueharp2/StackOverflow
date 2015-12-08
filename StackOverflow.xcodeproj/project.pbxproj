@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90D22E781C16407500CA417A /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D22E771C16407500CA417A /* hamburger.png */; };
+		90D22E7D1C16715C00CA417A /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D22E7C1C16715C00CA417A /* Error.m */; };
 		90EE435F1C1627DA007811E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE435E1C1627DA007811E8 /* main.m */; };
 		90EE43621C1627DA007811E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43611C1627DA007811E8 /* AppDelegate.m */; };
 		90EE43681C1627DA007811E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EE43661C1627DA007811E8 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		90D22E771C16407500CA417A /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
+		90D22E7B1C16715C00CA417A /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Error.h; path = ../Error.h; sourceTree = "<group>"; };
+		90D22E7C1C16715C00CA417A /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Error.m; path = ../Error.m; sourceTree = "<group>"; };
 		90EE435A1C1627DA007811E8 /* StackOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90EE435E1C1627DA007811E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90EE43601C1627DA007811E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				90EE439E1C1632AA007811E8 /* MenuTableViewController.m */,
 				90EE43A01C1632EA007811E8 /* MyQuestionsViewController.h */,
 				90EE43A11C1632EA007811E8 /* MyQuestionsViewController.m */,
+				90D22E7B1C16715C00CA417A /* Error.h */,
+				90D22E7C1C16715C00CA417A /* Error.m */,
 				90EE43931C163152007811E8 /* Views */,
 				90EE435D1C1627DA007811E8 /* Supporting Files */,
 			);
@@ -308,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D22E7D1C16715C00CA417A /* Error.m in Sources */,
 				90EE436B1C1627DA007811E8 /* StackOverflow.xcdatamodeld in Sources */,
 				90EE439C1C16327A007811E8 /* MainContentViewController.m in Sources */,
 				90EE43621C1627DA007811E8 /* AppDelegate.m in Sources */,

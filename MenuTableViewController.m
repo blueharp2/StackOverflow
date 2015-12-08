@@ -7,6 +7,7 @@
 //
 
 #import "MenuTableViewController.h"
+#import "Error.h"
 
 @interface MenuTableViewController ()
 
@@ -16,12 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSError *stackOverflowError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowBadJSON userInfo:nil];
+    NSError *stackOverflowErrorTwo = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowConnectionDown userInfo:nil];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSError *stackOverflowErrorThree = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowGeneralError userInfo:nil];
+  
 }
 
 - (void)didReceiveMemoryWarning {
