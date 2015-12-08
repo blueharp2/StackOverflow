@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^OAuthWebViewControllerCompletion)();
+
 @interface OAuthWebViewController : UIViewController
+
+@property (copy, nonatomic) OAuthWebViewControllerCompletion completion;
 
 @end
