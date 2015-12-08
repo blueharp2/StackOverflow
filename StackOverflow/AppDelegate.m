@@ -50,9 +50,9 @@
     [rootViewController.view addSubview:oAuthVC.view];
     [oAuthVC didMoveToParentViewController:rootViewController];
     
-    [rootViewController presentViewController:oAuthVC animated:true completion:^{
-        NSLog(@"Successfully Got and Saved Access Token");
-    }];
+//    [rootViewController presentViewController:oAuthVC animated:true completion:^{
+//        NSLog(@"Successfully Got and Saved Access Token");
+//    }];
     
 }
 

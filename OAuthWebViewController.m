@@ -31,7 +31,7 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
     
     self.webView.navigationDelegate = self;
     
-    NSString *stackURLString = [NSString stringWithFormat:@"%@client_id=%@&redirect_uri=%@", kBaseURL, kClientID, kRedirectURI];
+    NSString *stackURLString = [NSString stringWithFormat:@"%@client_id=%@&redirect_uri=%@&scope=write_access", kBaseURL, kClientID, kRedirectURI];
     
     NSURL *stackURL = [NSURL URLWithString:stackURLString];
     
@@ -47,6 +47,7 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
         NSArray *urlComponents = [[requestURL description] componentsSeparatedByString:@"="];
         NSString *accessToken = urlComponents.lastObject;
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSLog(@"recievied access token: %@", accessToken);
         [userDefaults setObject:accessToken forKey:@"accessToken"];
         [userDefaults synchronize];
         
