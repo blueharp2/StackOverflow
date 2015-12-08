@@ -40,11 +40,15 @@ NSTimeInterval const kburgerTimeToSlideMenuOpen = 0.2;
     [self setupAllViewControllers];
     [self setupBurgerButton];
     [self setupPanGesture];
+    
 }
 
 -(void) setupAllViewControllers{
+    [self setupAdditionalViewControllers];
     [self setupMenuViewController];
     [self setupMainContentViewController];
+    
+    self.viewControllers = @[self.topViewController, self.myQuestionsViewController];
     
 }
 
@@ -65,13 +69,13 @@ NSTimeInterval const kburgerTimeToSlideMenuOpen = 0.2;
     [self addChildViewController:contentViewController];
     contentViewController.view.frame = self.view.frame;
     
-    [self.view addSubview:contentViewController];
+    [self.view addSubview:contentViewController.view];
     [contentViewController didMoveToParentViewController:self];
-    self.topViewController =contentViewController;
+    self.topViewController = contentViewController;
 }
 
 -(void) setupAdditionalViewControllers{
-    MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestions VC"];
+    MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
     self.myQuestionsViewController = myQuestionsVC;
 }
 
@@ -168,9 +172,10 @@ NSTimeInterval const kburgerTimeToSlideMenuOpen = 0.2;
 
 #pragma mark - UITableViewDelegate
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *viewController = self.viewControllers[indexPath.row];
-    if (![viewController isEqual:self.topViewController]){
+    if (!
+        [viewController isEqual:self.topViewController]){
         [self switchToViewController:viewController];
         
     }
