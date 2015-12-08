@@ -33,7 +33,7 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
     
     NSString *stackURLString = [NSString stringWithFormat:@"%@client_id=%@&redirect_uri=%@", kBaseURL, kClientID, kRedirectURI];
     
-    NSURL *stackURL = [NSURLRequest requestWithURL:stackURL];
+    NSURL *stackURL = [NSURL URLWithString:stackURLString];
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:stackURL]];
 }
