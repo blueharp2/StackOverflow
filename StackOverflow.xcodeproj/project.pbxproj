@@ -14,6 +14,7 @@
 		9028865F1C179D52009AC31F /* SOSearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028865E1C179D52009AC31F /* SOSearchAPIService.m */; };
 		90D22E781C16407500CA417A /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D22E771C16407500CA417A /* hamburger.png */; };
 		90D22E7D1C16715C00CA417A /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D22E7C1C16715C00CA417A /* Error.m */; };
+		90DA11471C17BC780060529C /* SOSearchJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DA11461C17BC780060529C /* SOSearchJSONParser.m */; };
 		90EE435F1C1627DA007811E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE435E1C1627DA007811E8 /* main.m */; };
 		90EE43621C1627DA007811E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43611C1627DA007811E8 /* AppDelegate.m */; };
 		90EE43681C1627DA007811E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EE43661C1627DA007811E8 /* Main.storyboard */; };
@@ -60,6 +61,8 @@
 		90D22E771C16407500CA417A /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
 		90D22E7B1C16715C00CA417A /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Error.h; path = ../Error.h; sourceTree = "<group>"; };
 		90D22E7C1C16715C00CA417A /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Error.m; path = ../Error.m; sourceTree = "<group>"; };
+		90DA11451C17BC780060529C /* SOSearchJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSearchJSONParser.h; sourceTree = "<group>"; };
+		90DA11461C17BC780060529C /* SOSearchJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSearchJSONParser.m; sourceTree = "<group>"; };
 		90EE435A1C1627DA007811E8 /* StackOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90EE435E1C1627DA007811E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90EE43601C1627DA007811E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				902886541C178C8D009AC31F /* JSONRequestService.m */,
 				9028865D1C179D52009AC31F /* SOSearchAPIService.h */,
 				9028865E1C179D52009AC31F /* SOSearchAPIService.m */,
+				90DA11451C17BC780060529C /* SOSearchJSONParser.h */,
+				90DA11461C17BC780060529C /* SOSearchJSONParser.m */,
 				9028865A1C178F89009AC31F /* Constants.h */,
 				9028864D1C1782D2009AC31F /* User.h */,
 				9028864E1C1782D2009AC31F /* User.m */,
@@ -430,6 +435,7 @@
 				90D22E7D1C16715C00CA417A /* Error.m in Sources */,
 				90EE436B1C1627DA007811E8 /* StackOverflow.xcdatamodeld in Sources */,
 				90EE439C1C16327A007811E8 /* MainContentViewController.m in Sources */,
+				90DA11471C17BC780060529C /* SOSearchJSONParser.m in Sources */,
 				90EE43621C1627DA007811E8 /* AppDelegate.m in Sources */,
 				90EE435F1C1627DA007811E8 /* main.m in Sources */,
 				90EE43991C163254007811E8 /* OAuthWebViewController.m in Sources */,

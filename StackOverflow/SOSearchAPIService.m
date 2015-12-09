@@ -37,7 +37,7 @@
         }
         
         NSDictionary *result = (NSDictionary *) data;
-        completion(nil, error);
+        completion(result, error);
         return;
     }];
 }

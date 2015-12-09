@@ -30,7 +30,7 @@
 @property NSURL *link;
 
 
--(id)initWithDisplayName: (NSString*)displayName reputation:(int)reputation userId:(int)userID userType:(NSString*)userType profileImageURL:(NSURL*)profileImageURL profileImage:(UIImage*)profileImage link:(NSURL*)link;
+-(id)initWithDisplayName: (NSString*)displayName reputation:(int)reputation userId:(int)userID userType:(NSString*)userType profileImageURL:(NSURL*)profileImageURL link:(NSURL*)link;
 
 
 @end
