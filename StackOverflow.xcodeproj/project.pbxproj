@@ -15,6 +15,9 @@
 		90D22E781C16407500CA417A /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D22E771C16407500CA417A /* hamburger.png */; };
 		90D22E7D1C16715C00CA417A /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D22E7C1C16715C00CA417A /* Error.m */; };
 		90DA11471C17BC780060529C /* SOSearchJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DA11461C17BC780060529C /* SOSearchJSONParser.m */; };
+		90DA11491C17D41C0060529C /* SearchResultsTableVeiwCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DA11481C17D41C0060529C /* SearchResultsTableVeiwCell.xib */; };
+		90DA114C1C17D4AB0060529C /* SearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DA114B1C17D4AB0060529C /* SearchResultTableViewCell.m */; };
+		90DA114F1C17D5E40060529C /* ImageFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DA114E1C17D5E40060529C /* ImageFetchService.m */; };
 		90EE435F1C1627DA007811E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE435E1C1627DA007811E8 /* main.m */; };
 		90EE43621C1627DA007811E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EE43611C1627DA007811E8 /* AppDelegate.m */; };
 		90EE43681C1627DA007811E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EE43661C1627DA007811E8 /* Main.storyboard */; };
@@ -63,6 +66,11 @@
 		90D22E7C1C16715C00CA417A /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Error.m; path = ../Error.m; sourceTree = "<group>"; };
 		90DA11451C17BC780060529C /* SOSearchJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSearchJSONParser.h; sourceTree = "<group>"; };
 		90DA11461C17BC780060529C /* SOSearchJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSearchJSONParser.m; sourceTree = "<group>"; };
+		90DA11481C17D41C0060529C /* SearchResultsTableVeiwCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultsTableVeiwCell.xib; sourceTree = "<group>"; };
+		90DA114A1C17D4AB0060529C /* SearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewCell.h; sourceTree = "<group>"; };
+		90DA114B1C17D4AB0060529C /* SearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewCell.m; sourceTree = "<group>"; };
+		90DA114D1C17D5E40060529C /* ImageFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFetchService.h; sourceTree = "<group>"; };
+		90DA114E1C17D5E40060529C /* ImageFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFetchService.m; sourceTree = "<group>"; };
 		90EE435A1C1627DA007811E8 /* StackOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90EE435E1C1627DA007811E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90EE43601C1627DA007811E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +146,8 @@
 		9028865B1C179D01009AC31F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				90DA114D1C17D5E40060529C /* ImageFetchService.h */,
+				90DA114E1C17D5E40060529C /* ImageFetchService.m */,
 				902886531C178C8D009AC31F /* JSONRequestService.h */,
 				902886541C178C8D009AC31F /* JSONRequestService.m */,
 				9028865D1C179D52009AC31F /* SOSearchAPIService.h */,
@@ -164,6 +174,8 @@
 				90EE43981C163254007811E8 /* OAuthWebViewController.m */,
 				90EE439A1C16327A007811E8 /* MainContentViewController.h */,
 				90EE439B1C16327A007811E8 /* MainContentViewController.m */,
+				90DA114A1C17D4AB0060529C /* SearchResultTableViewCell.h */,
+				90DA114B1C17D4AB0060529C /* SearchResultTableViewCell.m */,
 				90EE439D1C1632AA007811E8 /* MenuTableViewController.h */,
 				90EE439E1C1632AA007811E8 /* MenuTableViewController.m */,
 				90EE43A01C1632EA007811E8 /* MyQuestionsViewController.h */,
@@ -241,6 +253,7 @@
 		90EE43931C163152007811E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				90DA11481C17D41C0060529C /* SearchResultsTableVeiwCell.xib */,
 				90EE43661C1627DA007811E8 /* Main.storyboard */,
 			);
 			name = Views;
@@ -359,6 +372,7 @@
 				90D22E781C16407500CA417A /* hamburger.png in Resources */,
 				90EE436D1C1627DA007811E8 /* Assets.xcassets in Resources */,
 				90EE43681C1627DA007811E8 /* Main.storyboard in Resources */,
+				90DA11491C17D41C0060529C /* SearchResultsTableVeiwCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,8 +454,10 @@
 				90EE435F1C1627DA007811E8 /* main.m in Sources */,
 				90EE43991C163254007811E8 /* OAuthWebViewController.m in Sources */,
 				90EE439F1C1632AA007811E8 /* MenuTableViewController.m in Sources */,
+				90DA114C1C17D4AB0060529C /* SearchResultTableViewCell.m in Sources */,
 				90EE43A21C1632EA007811E8 /* MyQuestionsViewController.m in Sources */,
 				90EE43961C16319F007811E8 /* MenuContainerViewController.m in Sources */,
+				90DA114F1C17D5E40060529C /* ImageFetchService.m in Sources */,
 				902886521C178821009AC31F /* Questions.m in Sources */,
 				9028865F1C179D52009AC31F /* SOSearchAPIService.m in Sources */,
 				902886551C178C8D009AC31F /* JSONRequestService.m in Sources */,

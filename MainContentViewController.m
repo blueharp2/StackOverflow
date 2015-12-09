@@ -23,6 +23,11 @@
 
 @implementation MainContentViewController
 
+-(void) setQuestions:(NSArray *)Questions{
+    _Questions = Questions;
+    [self.tableView.reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -36,11 +41,6 @@
 
     
 }
-
-
-
-
-
 
 
 
