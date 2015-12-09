@@ -183,25 +183,6 @@ NSTimeInterval const kburgerTimeToSlideMenuOpen = 0.2;
     }
 }
 
-#pragma mark - SOSearchAIPService
-
--(void) setupSOSearchAIPService{
-    [SOSearchAPIService searchWithTerm:@"ios" pageNumber:1 withCompletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"Error: %@", error.description);
-        } else {
-            [SOSearchJSONParser questionsArrayFromDictionary:data completionHandler:^(NSArray * _Nullable data, NSError * _Nullable error) {
-                if (error) {
-                    NSLog(@"Error: %@", error.description);
-                }
-                if (data.count >0){
-                    Questions *questionOne = (Questions *) data.firstObject;
-                    NSLog(@"Questions title one: %@", questionOne.title);
-                }
-            }];
-        }
-    }];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
