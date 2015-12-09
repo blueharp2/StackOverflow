@@ -11,7 +11,7 @@
 
 @interface SearchResultTableViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *OwnerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
@@ -24,9 +24,9 @@
     
     [ImageFetchService fetchImageInBackgroundFromURL:question.owner.profileImageURL completionHandler:^(UIImage * _Nullable data, NSError * _Nullable error) {
         if (error) {
-            [self.imageView setImage:@"hamburger"];
+            //[self.imageView setImage:@"hamburger"];
         }
-        [self.imageView setImage:data];
+        [self.OwnerImageView setImage:data];
     }];
 }
 

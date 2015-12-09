@@ -36,12 +36,16 @@
 }
 
 -(void) setupMainViewController{
-    self.tableView.delegate = self;
+    [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     [self.searchBar setDelegate:self];
     
+    
+    
     UINib *nib = [UINib nibWithNibName:@"SearchResultsTableVeiwCell" bundle:nil];
     [[self tableView]registerNib:nib forCellReuseIdentifier:@"SearchResultCell"];
+    
+    
 
     
 }
@@ -90,7 +94,10 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+//    self.tableView.estimatedRowHeight = 10.0;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    return self.tableView.rowHeight;
+    return 50.0;
 }
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
