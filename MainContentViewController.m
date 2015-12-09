@@ -31,15 +31,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupMainViewController];
     // Do any additional setup after loading the view.
 }
 
 -(void) setupMainViewController{
-    [self.tableView setDelegate:self];
+    self.tableView.delegate = self;
     [self.tableView setDataSource:self];
     [self.searchBar setDelegate:self];
     
-    UINib *nib = [UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil];
+    UINib *nib = [UINib nibWithNibName:@"SearchResultsTableVeiwCell" bundle:nil];
     [[self tableView]registerNib:nib forCellReuseIdentifier:@"SearchResultCell"];
 
     
@@ -61,7 +62,7 @@
                 if (data.count >0){
                     Questions *questionOne = (Questions *) data.firstObject;
                     NSLog(@"Questions title one: %@", questionOne.title);
-                    //[self SetQuestions:data];
+                    [self setQuestions:data];
                     return;
                 }
             }];
@@ -80,7 +81,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    SearchResultTableViewCell *cell = (SearchResultTableViewCell *) [self.tableView dequeueReusableCellWithIdentifier:@"SearchResultCell"];
+//    SearchResultTableViewCell *cell = (SearchResultTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"SearchResultCell"];
+    
+    SearchResultTableViewCell *cell = (SearchResultTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"SearchResultCell" forIndexPath:indexPath];
     
     cell.question = [self.Questions objectAtIndex:indexPath.row];
     return cell;
@@ -91,6 +94,7 @@
 }
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    
     [self fetchResultsForSearchTerm: self.searchBar.text];
 }
 
