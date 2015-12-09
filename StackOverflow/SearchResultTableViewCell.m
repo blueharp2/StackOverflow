@@ -7,8 +7,28 @@
 //
 
 #import "SearchResultTableViewCell.h"
+#import "ImageFetchService.h"
+
+@interface SearchResultTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 
 @implementation SearchResultTableViewCell
+
+-(void)setQuestion:(Questions *)question{
+    self.titleLabel.text = question.title;
+    
+    [ImageFetchService fetchImageInBackgroundFromURL:question.owner.profileImageURL completionHandler:^(UIImage * _Nullable data, NSError * _Nullable error) {
+        if (error) {
+            [self.imageView setImage:@"hamburger"];
+        }
+        [self.imageView setImage:data];
+    }];
+}
 
 - (void)awakeFromNib {
     // Initialization code

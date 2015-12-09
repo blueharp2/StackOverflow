@@ -7,15 +7,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Hj5-Ys-AiB" customClass="SearchResultTableViewCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchResultCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" id="Hj5-Ys-AiB" customClass="SearchResultTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hj5-Ys-AiB" id="Mdp-J4-2Jc">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LEv-AL-RNh">
+                        <rect key="frame" x="8" y="-1" width="45" height="45"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="3L8-Mf-wLf"/>
+                            <constraint firstAttribute="width" constant="45" id="Dr2-yF-nBs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g04-qP-OXu">
+                        <rect key="frame" x="61" y="11" width="34" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <animations/>
+                <constraints>
+                    <constraint firstItem="g04-qP-OXu" firstAttribute="leading" secondItem="LEv-AL-RNh" secondAttribute="trailing" constant="8" id="J3I-vt-RiI"/>
+                    <constraint firstItem="g04-qP-OXu" firstAttribute="centerY" secondItem="Mdp-J4-2Jc" secondAttribute="centerY" id="VYw-Oc-Rjc"/>
+                    <constraint firstItem="LEv-AL-RNh" firstAttribute="leading" secondItem="Mdp-J4-2Jc" secondAttribute="leading" constant="8" id="YpZ-GJ-6bN"/>
+                    <constraint firstItem="LEv-AL-RNh" firstAttribute="centerY" secondItem="Mdp-J4-2Jc" secondAttribute="centerY" id="pa6-d6-ofp"/>
+                </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="imageView" destination="LEv-AL-RNh" id="eAz-YU-rBt"/>
+                <outlet property="titleLabel" destination="g04-qP-OXu" id="Dbs-Dl-Odd"/>
+            </connections>
             <point key="canvasLocation" x="324" y="156"/>
         </tableViewCell>
     </objects>

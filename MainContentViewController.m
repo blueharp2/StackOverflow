@@ -10,6 +10,7 @@
 #import "SOSearchJSONParser.h"
 #import "SOSearchAPIService.h"
 #import "Questions.h"
+#import "SearchResultTableViewCell.h"
 
 @interface MainContentViewController ()<UITabBarDelegate, UITableViewDataSource, UISearchBarDelegate>
 
@@ -25,7 +26,7 @@
 
 -(void) setQuestions:(NSArray *)Questions{
     _Questions = Questions;
-    [self.tableView.reloadData];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -38,6 +39,8 @@
     [self.tableView setDataSource:self];
     [self.searchBar setDelegate:self];
     
+    UINib *nib = [UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil];
+    [[self tableView]registerNib:nib forCellReuseIdentifier:@"SearchResultCell"];
 
     
 }
@@ -85,6 +88,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50;
+}
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self fetchResultsForSearchTerm: self.searchBar.text];
