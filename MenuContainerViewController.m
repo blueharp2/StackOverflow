@@ -10,6 +10,9 @@
 #import "MenuTableViewController.h"
 #import "MainContentViewController.h"
 #import "MyQuestionsViewController.h"
+#import "SOSearchAPIService.h"
+#import "SOSearchJSONParser.h"
+#import "Questions.h"
 
 CGFloat const kburgerOpenScreenDivider = 3.0;
 CGFloat const kburgerOpenScreenMultiplier = 2.0;
@@ -174,11 +177,30 @@ NSTimeInterval const kburgerTimeToSlideMenuOpen = 0.2;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *viewController = self.viewControllers[indexPath.row];
-    if (!
-        [viewController isEqual:self.topViewController]){
+    if (![viewController isEqual:self.topViewController]){
         [self switchToViewController:viewController];
         
     }
+}
+
+#pragma mark - SOSearchAIPService
+
+-(void) setupSOSearchAIPService{
+    [SOSearchAPIService searchWithTerm:@"ios" pageNumber:1 withCompletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Error: %@", error.description);
+        } else {
+            [SOSearchJSONParser questionsArrayFromDictionary:data completionHandler:^(NSArray * _Nullable data, NSError * _Nullable error) {
+                if (error) {
+                    NSLog(@"Error: %@", error.description);
+                }
+                if (data.count >0){
+                    Questions *questionOne = (Questions *) data.firstObject;
+                    NSLog(@"Questions title one: %@", questionOne.title);
+                }
+            }];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
