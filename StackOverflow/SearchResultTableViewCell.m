@@ -10,6 +10,7 @@
 #import "ImageFetchService.h"
 
 @interface SearchResultTableViewCell ()
+@property (strong, nonatomic) Questions *q;
 
 @property (weak, nonatomic) IBOutlet UIImageView *OwnerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -19,15 +20,19 @@
 
 @implementation SearchResultTableViewCell
 
+
+
 -(void)setQuestion:(Questions *)question{
     self.titleLabel.text = question.title;
     
-    [ImageFetchService fetchImageInBackgroundFromURL:question.owner.profileImageURL completionHandler:^(UIImage * _Nullable data, NSError * _Nullable error) {
-        if (error) {
+//    [ImageFetchService fetchImageInBackgroundFromURL:question.owner.profileImageURL completionHandler:^(UIImage * _Nullable data, NSError * _Nullable error) {
+//        if (error) {
             //[self.imageView setImage:@"hamburger"];
-        }
-        [self.OwnerImageView setImage:data];
-    }];
+//        }
+//        [self.OwnerImageView setImage:data];
+    [self setQ:question];
+    [self.OwnerImageView setImage:self.q.owner.profileImage];
+//    }];
 }
 
 - (void)awakeFromNib {

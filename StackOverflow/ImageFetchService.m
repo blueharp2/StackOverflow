@@ -37,7 +37,6 @@
     });
 }
 
-
 +(void)fetchImageInBackgroundFromURL:(NSURL *_Nonnull)url completionHandler:(kNSImageCompletionHandler)completionHandler{
     
     dispatch_queue_t imageQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);

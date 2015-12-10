@@ -11,18 +11,21 @@
 #import "SOSearchAPIService.h"
 #import "Questions.h"
 #import "SearchResultTableViewCell.h"
+#import "ImageFetchService.h"
 
 @interface MainContentViewController ()<UITabBarDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
-@property (strong, nonatomic) NSArray<Questions *> *Questions;
-
+@property (strong, nonatomic) NSMutableArray<Questions *> *Questions;
+@property dispatch_queue_t imageQueue ;
 
 @end
 
 @implementation MainContentViewController
+
+
 
 -(void) setQuestions:(NSArray *)Questions{
     _Questions = Questions;
@@ -40,7 +43,11 @@
     [self.tableView setDataSource:self];
     [self.searchBar setDelegate:self];
     
+    [self setImageQueue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)];
+
+
     
+    [self fetchResultsForSearchTerm:@"ios help"];
     
     UINib *nib = [UINib nibWithNibName:@"SearchResultsTableVeiwCell" bundle:nil];
     [[self tableView]registerNib:nib forCellReuseIdentifier:@"SearchResultCell"];
@@ -89,9 +96,31 @@
     
     SearchResultTableViewCell *cell = (SearchResultTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"SearchResultCell" forIndexPath:indexPath];
     
-    cell.question = [self.Questions objectAtIndex:indexPath.row];
+    
+    
+    Questions *question = [self.Questions objectAtIndex:indexPath.row];
+    
+    [self fetchImagesForIndexPath:indexPath];
+    
+    [cell setQuestion:question];
+    
+    
     return cell;
 }
+
+-(void) fetchImagesForIndexPath:(NSIndexPath *)indexPath {
+    Questions *question = [self.Questions objectAtIndex:indexPath.row];
+    
+    [ImageFetchService fetchImagesWithDispatchQueue:self.imageQueue withUrl:question.owner.profileImageURL completionHandler:^(UIImage * _Nullable data, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"error dowloading image: %@", error.description );
+        } else {
+            [question.owner setProfileImage:data];
+
+        }
+    }];
+}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    self.tableView.estimatedRowHeight = 10.0;
